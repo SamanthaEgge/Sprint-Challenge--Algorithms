@@ -9,8 +9,8 @@
     while (a < n * n * n):
       a = a + n * n`
 
-# b)  Time: O(n^2), Space: O(1) #
-    This is because for each iteration of the range(n) the while loop must run for each. This causes the n^2.
+# b)  Time: O(n), Space: O(1) #
+    For each n, the function must run x2 as many times to get through the while loop.
     Space is O(1) since no values are being saved, and it's getting overwritten each time.
 
     `sum = 0
