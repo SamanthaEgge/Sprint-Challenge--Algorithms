@@ -36,13 +36,35 @@ Suppose that you have an n-story building and plenty of eggs. Suppose also that 
 Write out your proposed algorithm in plain English or pseudocode AND give the runtime complexity of your solution.
 
 # Proposed Algo #
+  Take a set of n building levels
+  Need to check each level starting at 0 and determine if egg is broken
+  For floor in floors
+  Check egg drop, did egg survive?
+  if True, do the algo again, checking counter +1 while counter < Floor
 
+  This checks starting at 0 -> n floors until an egg breaks
+  The answer is returned as floor(counter-1)
+  
 
 # Pseudocode #
 `def egg_check(building)
-  
+  counter initalization
+  broken floor= None
+  #Exit Case
+  if Broken_floor:
+    return broken_floor
+  if counter < building
+    drop egg
+    if egg survived:
+      counter+1
+      return building
+    else:
+      broken floor=counter-1
+  else:
+    broken_floor = 'no broken floors for this building'
 `
 
 # Runtime Complexity #
-Space: O()
-Time: O()
+Space: O(1)
+Time: O(n)
+(it's of o n, because the if statement checking if counter < building only iterates once)
