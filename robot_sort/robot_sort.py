@@ -81,7 +81,7 @@ class SortingRobot:
     Turn on the robot's light
     """
     self._light = "ON"
-  def self.(self):
+  def set_light_off(self):
     """
     Turn off the robot's light
     """
@@ -114,6 +114,7 @@ class SortingRobot:
     while self.light_is_on:
       #Changing light setting, to determine if light was changed this pass through
       self.set_light_off()
+      print(self.light_is_on())
         # checking to see that there's still space to the right
       if self.can_move_right():
         if self.compare_item() is -1:
@@ -121,8 +122,8 @@ class SortingRobot:
           self.move_right()
           if self.light_is_on is False:
             self.set_light_on
-        elif compare_item() is None:
-          swap_item()
+        elif self.compare_item() is None:
+          self.swap_item()
           self.move_right()
         else:
           self.move_right()
