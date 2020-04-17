@@ -109,8 +109,35 @@ class SortingRobot:
     # exit case of have flag of 'made swaps', if you get all the way right, and no swaps were made
     # the sort is complete! While swaps are being made, keep iterating through
 
+    ## This will be our check to determine if a swap was made. Setting to true
+    set_light_on()
+    while light_is_on:
+      #Changing light setting, to determine if light was changed this pass through
+      set_light_off()
+      for element in self:
+        # checking to see that there's still space to the right
+        if can_move_right():
+          if compare_item() is -1:
+            swap_item()
+            move_right()
+            if light_is_on is False:
+              set_light_on
+          elif compare_item() is None:
+            swap_item()
+            move_right()
+          else:
+            move_right()
+        else:
+          return
+    
 
-        
+      
+
+    #     Compare the held item with the item in front of the robot:
+    # If the held item's value is greater, return 1.
+    # If the held item's value is less, return -1.
+    # If the held item's value is equal, return 0.
+    # If either item is None, return None.
 
 
 if __name__ == "__main__":
