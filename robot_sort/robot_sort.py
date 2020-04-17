@@ -116,7 +116,7 @@ class SortingRobot:
       self.set_light_off()
       print(self.light_is_on())
         # checking to see that there's still space to the right
-      if self.can_move_right():
+      while self.can_move_right():
         if self.compare_item() is -1:
           self.swap_item()
           self.move_right()
@@ -127,8 +127,8 @@ class SortingRobot:
           self.move_right()
         else:
           self.move_right()
-      else:
-        return
+      while self.can_move_left():
+        self.move_left()
 
     ### What I need to do to fix this, is if can_move_right is false & light_on is true
     # go all the way back to the start, and re-loop the comparison swaps
