@@ -128,7 +128,11 @@ class SortingRobot:
         else:
           self.move_right()
       else:
-        self.sort()
+        return
+
+    ### What I need to do to fix this, is if can_move_right is false & light_on is true
+    # go all the way back to the start, and re-loop the comparison swaps
+    # 
     
 
       
