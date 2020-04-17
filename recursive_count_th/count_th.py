@@ -23,7 +23,7 @@ def count_th(word):
   if word[-2:] == 'th':
     count += 1
     # the following two lines need to be refactored :(
-    word = word[:-2:]
+    word = word[:-1:]
     return count_th(word)
   else:
     word = word[:-1:]
