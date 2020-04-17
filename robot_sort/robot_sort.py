@@ -102,8 +102,13 @@ class SortingRobot:
     # Need to check each element in range for loop
     # Also need to check can_moves to save movement points.
     # Grab item, move right, check item, if else loop to check if bigger/smaller/same
-    # if smaller swap items
-    
+    # if item in hand is smaller, swap items
+    # if item in hand is bigger move right
+    # Now loop back through.
+    # Exit case of 'cannot move right', go all the way to the left and begin again
+    # exit case of have flag of 'made swaps', if you get all the way right, and no swaps were made
+    # the sort is complete! While swaps are being made, keep iterating through
+
 
         
 
